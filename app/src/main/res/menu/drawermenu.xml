@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Home"
+            android:id="@+id/nav_item_home" />
+
+        <item android:title="Rate Contract"
+            android:id="@+id/nav_item_rate_contract"
+            />
+
+        <item android:title="Notifications"
+            android:id="@+id/nav_item_notification"
+            />
+
+        <item android:title="Local Purchase Details "
+            android:id="@+id/nav_item_local_purchase"
+            />
+
+        <item android:title="Available Stock"
+            android:id="@+id/nav_item_avail_stock"
+            />
+
+        <item android:title="Supply History"
+            android:id="@+id/nav_item_supply_history"
+            />
+
+        <item android:title="Vendor List"
+            android:id="@+id/nav_item_vendor_list"
+            />
+
+        <item android:title="Today's Indent"
+            />
+        <item android:title="Pending Indent"
+            />
+
+        <item android:title="Change Password"
+            android:id="@+id/nav_item_change_pass" />
+
+        <item android:title="Update Profile"
+            android:id="@+id/nav_item_update_profile" />
+
+        <item android:title="Logout"
+            android:id="@+id/nav_item_logout" />
+    </group>
+
+</menu>

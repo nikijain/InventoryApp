@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewSuppyHistoryDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_excel"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/button_orange"
+            android:gravity="center"
+            android:text="Export To EXCEL"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Scroll horizontally to view more data"
+            android:textColor="@color/colorGrey" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/table_demographyInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:isScrollContainer="true">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="S.No"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Drug Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Batch No."
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Quantity"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Sending Date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Receiving Status"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Receiving Date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Nimusilide BP 1% w/w | Cream | 250 gm"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="yuyuyuyu"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="75.00"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Received"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="2"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name2"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Nimusilide BP 1% w/w | Cream | 250 gm"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="yuyuyuyu"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="75.00"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation2"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus2"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Received"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification2"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo3"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="3"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name3"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Amitraz 12.5% | Liquid | 120ml"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender3"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="yuyuyuyu"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age3"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="75.00"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation3"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus3"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Received"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification3"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo4"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="4"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name4"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Abamectin 50 Mg + Clorsulon 1 Gm. | Bolus | 1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender4"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="yuyuyuyu"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age4"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="75.00"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation4"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus4"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Received"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification4"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo5"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="5"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name5"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Nimusilide BP 1% w/w | Cream | 250 gm"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender5"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="yuyuyuyu"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age5"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="75.00"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation5"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus5"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Received"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification5"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo6"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="6"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name6"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Abamectin 50 Mg + Clorsulon 1 Gm. | Bolus | 1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender6"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="yuyuyuyu"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age6"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="75.00"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation6"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus6"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Received"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification6"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo7"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="7"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name7"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Nimusilide BP 1% w/w | Cream | 250 gm"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender7"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="yuyuyuyu"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age7"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="75.00"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation7"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus7"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Received"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification7"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>

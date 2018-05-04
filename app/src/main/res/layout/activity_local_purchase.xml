@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocalPurchaseActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_toolbar" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:paddingBottom="30dp"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:inputType="text"
+                        android:text="Select Drug *"
+                        android:padding="10dp"
+                        android:textColor="#FFF"
+                        android:textColorHint="#FFFF"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/tourType"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:padding="10dp"
+                        android:background="@drawable/gradient_spinner"
+                        android:gravity="center"
+                        android:popupBackground="@color/colorWhite"
+                        android:textColor="#000" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:text="Drug Type *"
+                        android:textColor="#FFF"
+                        android:textColorHint="#FFFF"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/hospitalSpinner"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:padding="10dp"
+                        android:background="@drawable/gradient_spinner"
+                        android:gravity="left|center"
+                        android:popupBackground="@color/colorWhite"
+                        android:textColor="#000" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Volume in packing(eg.50ml,4 tablet,50gm,etc.)*"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter Volume"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:text="Packing Name *"
+                        android:textColor="#FFF"
+                        android:textColorHint="#FFFF"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/blockSpinner"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:padding="10dp"
+                        android:background="@drawable/gradient_spinner"
+                        android:gravity="center"
+                        android:popupBackground="@color/colorWhite"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:text="Drug Category *"
+                        android:textColor="#FFF"
+                        android:textColorHint="#FFFF"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/healthCenterSpinner"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:padding="10dp"
+                        android:background="@drawable/gradient_spinner"
+                        android:gravity="center"
+                        android:popupBackground="@color/colorWhite"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Quantity *"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:id="@+id/et_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter Qunatity"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Batch Number *"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter Batch No."
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Drug License Number *"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter License No."
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Expiry Date *"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter Expiry Date"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Unit Price (₹)*"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter Unit Price"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Final Amount (₹)"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter Final Amount"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.20"
+                        android:background="@color/colorTheme"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="Supplier Details (Name,Address,etc.)*"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.80"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:hint="Enter Supplier Details"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:imeOptions="actionDone"
+                        android:textColor="#000"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_round"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

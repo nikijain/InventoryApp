@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="5dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="1."
+                android:layout_weight="1.40"
+                android:textColor="@color/colorBlack" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.20"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:text="Drug Name"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDrugName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:text="Phenyl Black Disinfectant Fluids (Emulsifying) Grade A (Medicine Code MD-1252)"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.40"
+                android:src="@drawable/downarrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#535353"
+            android:id="@+id/linearLayout"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/light_blue"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Drug Type"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/txtDrugType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bolus"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Packing Size"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtPackingSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="20 / Amp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/light_blue"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:text="Total Quantity"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtTotalQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12 mp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:text="Batch Number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtBatchNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="3334"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/light_blue"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:text="License Number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtLicenseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="454"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:text="Expiry Date"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtExpiryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="26-07-2018"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/light_blue"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:text="Supplier"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtSupplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="test "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:text="Category"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="allopathy"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_vsmall" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sfatechgroup.inventory">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppFullScreenTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RateContractActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".VendorListActivity" />
+        <activity
+            android:name=".LocalPurchaseActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".UpdateProfileActivity" />
+        <activity android:name=".AvailableStockActivity" />
+        <activity android:name=".SupplyHistoryActivity" />
+        <activity android:name=".ViewSuppyHistoryDetailActivity" />
+        <activity android:name=".RateContractOutDept" />
+        <activity android:name=".LUNPurchaseDetails"></activity>
+    </application>
+
+</manifest>
