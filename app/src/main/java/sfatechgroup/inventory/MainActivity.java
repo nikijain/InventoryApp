@@ -66,34 +66,27 @@ public class MainActivity extends AppCompatActivity {
                     mFragmentManager = getSupportFragmentManager();
                     mFragmentTransaction = mFragmentManager.beginTransaction();
                     mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.fragment.HomeFragment()).commit();
-
-                }
-                if (menuItem.getItemId() == R.id.nav_item_rate_contract) {
+                } else if (menuItem.getItemId() == R.id.nav_item_rate_contract) {
                     intent = new Intent(context, RateContractActivity.class);
                     startActivity(intent);
-                }
-
-                if (menuItem.getItemId() == R.id.nav_item_local_purchase) {
+                } else if (menuItem.getItemId() == R.id.nav_item_local_purchase) {
                     intent = new Intent(context, LocalPurchaseActivity.class);
                     startActivity(intent);
-                }
-
-                 if (menuItem.getItemId() == R.id.nav_item_change_pass) {
+                } else if (menuItem.getItemId() == R.id.nav_item_lab_test) {
+                    intent = new Intent(context, LabTestActivity.class);
+                    startActivity(intent);
+                } else if (menuItem.getItemId() == R.id.nav_item_change_pass) {
                     intent = new Intent(context, ChangePasswordActivity.class);
                     startActivity(intent);
-                }
-                if (menuItem.getItemId() == R.id.nav_item_avail_stock) {
+                } else if (menuItem.getItemId() == R.id.nav_item_avail_stock) {
                     intent = new Intent(context, AvailableStockActivity.class);
                     startActivity(intent);
-                }
-                if (menuItem.getItemId() == R.id.nav_item_supply_history) {
+                } else if (menuItem.getItemId() == R.id.nav_item_supply_history) {
                     intent = new Intent(context, SupplyHistoryActivity.class);
                     startActivity(intent);
-                }
-                if (menuItem.getItemId() == R.id.nav_item_notification) {
+                } else if (menuItem.getItemId() == R.id.nav_item_notification) {
                     showCustomView();
                 }
-
                 return false;
             }
 

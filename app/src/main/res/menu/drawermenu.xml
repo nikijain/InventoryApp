@@ -26,6 +26,13 @@
             android:id="@+id/nav_item_supply_history"
             />
 
+        <item android:title="Purchase Orders"
+            android:id="@+id/nav_item_purchase_orders"
+            />
+        <item android:title="Lab Test"
+            android:id="@+id/nav_item_lab_test"
+            />
+
         <item android:title="Vendor List"
             android:id="@+id/nav_item_vendor_list"
             />
