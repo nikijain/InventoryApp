@@ -72,8 +72,29 @@ public class MainActivity extends AppCompatActivity {
                 } else if (menuItem.getItemId() == R.id.nav_item_local_purchase) {
                     intent = new Intent(context, LocalPurchaseActivity.class);
                     startActivity(intent);
+                }else if (menuItem.getItemId() == R.id.nav_drugwise_request) {
+                    intent = new Intent(context, ReceivedIndentsActivity.class);
+                    intent.putExtra("param","DrugWise");
+                    startActivity(intent);
+                }else if (menuItem.getItemId() == R.id.nav_institutewise_request) {
+                    intent = new Intent(context, ReceivedIndentsActivity.class);
+                    intent.putExtra("param","InstituteWise");
+                    startActivity(intent);
+                }
+               /* else if (menuItem.getItemId() == R.id.nav_sendto_division) {
+                    intent = new Intent(context, SendIndentToDivisionActivity.class);
+                    intent.putExtra("param","SendToDivision");
+                    startActivity(intent);
+                } */
+                else if (menuItem.getItemId() == R.id.nav_indent_history) {
+                    intent = new Intent(context, SendIndentToDivisionActivity.class);
+                    intent.putExtra("param","IndentHistory");
+                    startActivity(intent);
                 } else if (menuItem.getItemId() == R.id.nav_item_lab_test) {
                     intent = new Intent(context, LabTestActivity.class);
+                    startActivity(intent);
+                }else if (menuItem.getItemId() == R.id.nav_item_purchase_orders) {
+                    intent = new Intent(context, PurchaseOrdersActivity.class);
                     startActivity(intent);
                 } else if (menuItem.getItemId() == R.id.nav_item_change_pass) {
                     intent = new Intent(context, ChangePasswordActivity.class);
@@ -91,8 +112,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Welcome User");

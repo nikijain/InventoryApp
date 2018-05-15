@@ -20,17 +20,17 @@
         android:orientation="vertical"
         android:paddingBottom="10dp">
 
-        <Button
-            android:id="@+id/btn_excel"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:background="@drawable/button_orange"
-            android:gravity="center"
-            android:text="Export To EXCEL"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/text_small"/>
+        <!--<Button-->
+            <!--android:id="@+id/btn_excel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:background="@drawable/button_orange"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Export To EXCEL"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/text_small"/>-->
 
         <TextView
             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Test No."
+                            android:text="Order Number"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
@@ -90,7 +90,7 @@
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Drug"
+                            android:text="Drug(s)"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
@@ -100,7 +100,7 @@
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Batch No."
+                            android:text="Vendor"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
@@ -110,17 +110,17 @@
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Lab Name"
+                            android:text="Order Date"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/cell_shape"
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Quantity"
+                            android:text="Total Amount(₹)"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
@@ -130,27 +130,27 @@
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Sending Date"
+                            android:text="Draft/Sent"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
-                            android:layout_width="140dp"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/cell_shape"
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Result"
+                            android:text="Vendor View Order On"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
-                            android:layout_width="140dp"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/cell_shape"
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Result Date"
+                            android:text="Vendor Accept Order On"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
@@ -160,7 +160,7 @@
                             android:gravity="center"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:text="Report"
+                            android:text="Action"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                     </TableRow>
@@ -222,7 +222,7 @@
                             android:textColor="@color/colorBlack" />
                         <TextView
                             android:id="@+id/txt_workingstatus"
-                            android:layout_width="120dp"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"
@@ -239,15 +239,14 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorBlack" />
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="200dp"
                             android:layout_height="30dp"
                             android:gravity="center"
-                            android:background="@drawable/rounded_button"
-                            android:text="Pending"
+                            android:text="-"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"
@@ -321,7 +320,7 @@
                             android:textColor="@color/colorBlack" />
                         <TextView
                             android:id="@+id/txt_workingstatus2"
-                            android:layout_width="140dp"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"
@@ -339,15 +338,14 @@
                             android:textColor="@color/colorBlack" />
 
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="200dp"
                             android:layout_height="30dp"
                             android:gravity="center"
-                            android:background="@drawable/rounded_button_green"
-                            android:text="Pass"
+                            android:text="-"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"
@@ -355,13 +353,11 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
-                            android:id="@+id/btn_view"
                             android:layout_width="120dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"
-                            android:background="@drawable/cell_shape"
-                            android:text="View"
+                            android:text="-"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                     </TableRow>
@@ -423,7 +419,7 @@
                             android:textColor="@color/colorBlack" />
                         <TextView
                             android:id="@+id/txt_workingstatus3"
-                            android:layout_width="140dp"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"
@@ -441,14 +437,14 @@
                             android:textColor="@color/colorBlack" />
 
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="200dp"
                             android:layout_height="30dp"
                             android:gravity="center"
                             android:text="-"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/colorWhite" />
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"

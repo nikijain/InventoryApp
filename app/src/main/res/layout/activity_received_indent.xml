@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewSuppyHistoryDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/table_indentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_drugrequest"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/button_orange"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Drug Wise Request"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_small"/>
+        <Button
+            android:id="@+id/btn_instrequest"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_orange"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Institute Wise Request"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_small"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TableLayout
+                    android:id="@+id/table_drugwise"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:isScrollContainer="true"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <Button
+                            android:id="@+id/btn_excel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:background="@drawable/button_orange"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Export To EXCEL"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_small" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:text="Scroll horizontally to view more data"
+                            android:textColor="@color/colorGrey" />
+                    </LinearLayout>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="S.No"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Drug name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Drug Type"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Packing Size"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Unit Price(₹)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="No. of Requests"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Total Requested Quantity"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Result Date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Action"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Analgin 0.5gm/ml (Medicine Code MD-342)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="AF0101"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Central Analytical Laboratories"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="-"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="-"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:id="@+id/btn_view"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:background="@drawable/button_round"
+                            android:text="View"
+                            android:layout_gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="2"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender2"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Inj.Ascorbic Acid IP 250mg/ ml (As Sodium Ascorbate) (Medicine Code MD-343)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="AF-107"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="ITL Labs Pvt Ltd"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus2"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification2"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Pass"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="-"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:id="@+id/btn_view1"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_round"
+                            android:text="View"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo3"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="3"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender3"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Cefoperazone Sodium 1gm +Tazobactum Sodium 125 mg (Medicine Code MD-344)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age3"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="08"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation3"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Pious Laboratories Pvt. Ltd."
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus3"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification3"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="-"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:id="@+id/btn_view2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_round"
+                            android:text="View"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/table_institutewise"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:isScrollContainer="true"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:text="Scroll horizontally to view more data"
+                            android:textColor="@color/colorGrey" />
+                    </LinearLayout>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="S.No"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Institution name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="User Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Officer Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Mobile"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="No. of Requests"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Details"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Analgin 0.5gm/ml (Medicine Code MD-342)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="AF0101"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Central Analytical Laboratories"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/btn_instituteview"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:background="@drawable/button_round"
+                            android:text="View"
+                            android:layout_gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="2"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Inj.Ascorbic Acid IP 250mg/ ml (As Sodium Ascorbate) (Medicine Code MD-343)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="AF-107"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="ITL Labs Pvt Ltd"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/btn_instituteview1"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_round"
+                            android:text="View"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="3"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Cefoperazone Sodium 1gm +Tazobactum Sodium 125 mg (Medicine Code MD-344)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="08"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Pious Laboratories Pvt. Ltd."
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="06-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/btn_instituteview2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_round"
+                            android:text="View"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>

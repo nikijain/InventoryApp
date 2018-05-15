@@ -1,7 +1,6 @@
 package sfatechgroup.inventory;
 import android.Manifest;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -30,28 +29,20 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class LabTestActivity extends AppCompatActivity {
+public class ViewDrugWiseActivity extends AppCompatActivity {
 
     private TextView btn_excel,txt_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lab_test);
+        setContentView(R.layout.activity_view_drug_wise);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Lab Testing Records");
+        toolbar.setTitle("View Request Indent");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        txt_view =(TextView) findViewById(R.id.btn_view);
-        txt_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LabTestActivity.this, LabTestViewActivity.class);
-                startActivity(intent);
-            }
-        });
         btn_excel =(TextView) findViewById(R.id.btn_excel);
         btn_excel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,10 +52,10 @@ public class LabTestActivity extends AppCompatActivity {
                 if (isPermission == true) {
                     SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
                     String format = s.format(new Date());
-                    if(saveToExcel(v.getContext(),"labtest"+format+".xls")){
-                        Toast.makeText(LabTestActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
+                    if(saveToExcel(v.getContext(),"requestindent"+format+".xls")){
+                        Toast.makeText(ViewDrugWiseActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
                     } else{
-                        Toast.makeText(LabTestActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ViewDrugWiseActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     requestPermission();
@@ -73,10 +64,10 @@ public class LabTestActivity extends AppCompatActivity {
         });
     }
     private boolean requestPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(LabTestActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                && ActivityCompat.shouldShowRequestPermissionRationale(LabTestActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(ViewDrugWiseActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                && ActivityCompat.shouldShowRequestPermissionRationale(ViewDrugWiseActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
         } else {
-            ActivityCompat.requestPermissions(LabTestActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            ActivityCompat.requestPermissions(ViewDrugWiseActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
                     Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
         }
         return true;
@@ -89,13 +80,13 @@ public class LabTestActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
                     String format = s.format(new Date());
-                    if(saveToExcel(LabTestActivity.this,"labtest"+format+".xls")){
-                        Toast.makeText(LabTestActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
+                    if(saveToExcel(ViewDrugWiseActivity.this,"labtest"+format+".xls")){
+                        Toast.makeText(ViewDrugWiseActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
                     } else{
-                        Toast.makeText(LabTestActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ViewDrugWiseActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
                     }
                 }else {
-                    Toast.makeText(LabTestActivity.this,"You don't have file permission.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ViewDrugWiseActivity.this,"You don't have file permission.",Toast.LENGTH_SHORT).show();
                 }
         }
     }

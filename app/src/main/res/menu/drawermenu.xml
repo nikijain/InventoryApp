@@ -3,53 +3,67 @@
 
     <group android:checkableBehavior="single">
 
-        <item android:title="Home"
-            android:id="@+id/nav_item_home" />
+        <item
+            android:id="@+id/nav_item_home"
+            android:title="Home" />
 
-        <item android:title="Rate Contract"
+        <item
             android:id="@+id/nav_item_rate_contract"
-            />
+            android:title="Rate Contract" />
 
-        <item android:title="Notifications"
+        <item
             android:id="@+id/nav_item_notification"
-            />
+            android:title="Notifications" />
 
-        <item android:title="Local Purchase Details "
+        <item
             android:id="@+id/nav_item_local_purchase"
-            />
+            android:title="Local Purchase Details " />
 
-        <item android:title="Available Stock"
+        <item
             android:id="@+id/nav_item_avail_stock"
-            />
+            android:title="Available Stock" />
 
-        <item android:title="Supply History"
+        <item
             android:id="@+id/nav_item_supply_history"
-            />
+            android:title="Supply History" />
 
-        <item android:title="Purchase Orders"
+        <item
             android:id="@+id/nav_item_purchase_orders"
-            />
-        <item android:title="Lab Test"
+            android:title="Purchase Orders" />
+        <item
             android:id="@+id/nav_item_lab_test"
-            />
+            android:title="Lab Test" />
 
-        <item android:title="Vendor List"
+        <item
             android:id="@+id/nav_item_vendor_list"
-            />
+            android:title="Vendor List" />
 
-        <item android:title="Today's Indent"
-            />
-        <item android:title="Pending Indent"
-            />
 
-        <item android:title="Change Password"
-            android:id="@+id/nav_item_change_pass" />
+        <item
+            android:id="@+id/nav_drugwise_request"
+            android:title="Drug Wise Request" />
 
-        <item android:title="Update Profile"
-            android:id="@+id/nav_item_update_profile" />
+        <item
+            android:id="@+id/nav_institutewise_request"
+            android:title="Institute Wise Request" />
 
-        <item android:title="Logout"
-            android:id="@+id/nav_item_logout" />
+
+        <item
+            android:id="@+id/nav_indent_history"
+            android:title="Sent Indent History" />
+
+
+        <item
+            android:id="@+id/nav_item_change_pass"
+            android:title="Change Password" />
+
+        <item
+            android:id="@+id/nav_item_update_profile"
+            android:title="Update Profile" />
+
+        <item
+            android:id="@+id/nav_item_logout"
+            android:title="Logout" />
     </group>
 
 </menu>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewSuppyHistoryDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_excel"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/button_orange"
+            android:gravity="center"
+            android:text="Export To EXCEL"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Scroll horizontally to view more data"
+            android:textColor="@color/colorGrey" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/table_demographyInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:isScrollContainer="true">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="S.No"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Request No."
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Institution Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Institution Type"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Drug Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Drug Type"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Packing Size"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Required Quantity"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:text="Request Date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="20170713/3984/095903"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Barrai (Unit_4111)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Key village unit"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Analgin 0.5gm/ml"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Injection"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="30ml/Vial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="600 Vial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="13-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo1"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="2"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="20170713/3984/095903"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Barrai (Unit_4111)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Key village unit"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Analgin 0.5gm/ml"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus1"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Injection"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification1"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="30ml/Vial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="600 Vial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="13-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_row3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_sNo2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="3"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_name2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="20170713/3984/095903"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_gender2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Barrai (Unit_4111)"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_age2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Key village unit"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_relation2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Analgin 0.5gm/ml"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_workingstatus2"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Injection"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/txt_qualification2"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="30ml/Vial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="600 Vial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="13-07-2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorBlack" />
+                    </TableRow>
+                </LinearLayout>
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>

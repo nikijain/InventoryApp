@@ -31,7 +31,6 @@ public class LocalPurchaseActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

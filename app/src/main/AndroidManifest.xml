@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sfatechgroup.inventory">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -22,17 +24,23 @@
         <activity android:name=".RateContractActivity" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".VendorListActivity" />
+        <activity android:name=".ReceivedIndentsActivity" />
+        <activity android:name=".SendIndentToDivisionActivity" />
         <activity
             android:name=".LocalPurchaseActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".UpdateProfileActivity" />
         <activity android:name=".LabTestActivity" />
+        <activity android:name=".LabTestViewActivity" />
+        <activity android:name=".PurchaseOrdersActivity" />
         <activity android:name=".AvailableStockActivity" />
         <activity android:name=".SupplyHistoryActivity" />
         <activity android:name=".ViewSuppyHistoryDetailActivity" />
+        <activity android:name=".ViewDrugWiseActivity" />
         <activity android:name=".RateContractOutDept" />
-        <activity android:name=".LUNPurchaseDetails"></activity>
+        <activity android:name=".LUNPurchaseDetails" />
+        <activity android:name=".SentIndentHistory"></activity>
     </application>
 
 </manifest>
