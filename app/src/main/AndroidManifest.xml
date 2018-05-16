@@ -41,7 +41,7 @@
         <activity android:name=".RateContractOutDept" />
         <activity android:name=".LUNPurchaseDetails" />
         <activity android:name=".SentIndentHistory" />
-        <activity android:name=".IntentDetailActivity"></activity>
+        <activity android:name=".IndentDetailActivity"></activity>
     </application>
 
 </manifest>
