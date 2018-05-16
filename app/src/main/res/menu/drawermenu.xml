@@ -17,7 +17,7 @@
 
         <item
             android:id="@+id/nav_item_local_purchase"
-            android:title="Local Purchase Details " />
+            android:title="Local Purchase " />
 
         <item
             android:id="@+id/nav_item_avail_stock"

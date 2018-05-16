@@ -40,7 +40,8 @@
         <activity android:name=".ViewDrugWiseActivity" />
         <activity android:name=".RateContractOutDept" />
         <activity android:name=".LUNPurchaseDetails" />
-        <activity android:name=".SentIndentHistory"></activity>
+        <activity android:name=".SentIndentHistory" />
+        <activity android:name=".IntentDetailActivity"></activity>
     </application>
 
 </manifest>

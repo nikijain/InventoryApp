@@ -91,6 +91,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="3dp"
                             android:layout_weight="1.15"
+                            android:visibility="invisible"
                             android:background="@drawable/button_orange"
                             android:gravity="center"
                             android:padding="6dp"
@@ -269,6 +270,7 @@
                             android:background="@drawable/button_orange"
                             android:gravity="center"
                             android:padding="6dp"
+                            android:visibility="invisible"
                             android:text="Distribute"
                             android:textColor="@color/colorWhite" />
                     </LinearLayout>
@@ -440,6 +442,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="3dp"
                             android:layout_weight="1.15"
+                            android:visibility="invisible"
                             android:background="@drawable/button_orange"
                             android:gravity="center"
                             android:padding="6dp"
@@ -613,6 +616,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="3dp"
                             android:layout_weight="1.15"
+                            android:visibility="invisible"
                             android:background="@drawable/button_orange"
                             android:gravity="center"
                             android:padding="6dp"

@@ -16,6 +16,7 @@
     <color name="colorYellow">#faf44f</color>
     <color name="black">#000</color>
     <color name="medium_grey">#9E9E9E</color>
-    <color name="light_blue">#d1eef9</color>
+    <color name="light_blue">#d8d1eef9</color>
     <color name="transGrey">#dcc7c7c7</color>
+    <color name="trans">#e6e6e6</color>
 </resources>
