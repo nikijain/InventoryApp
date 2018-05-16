@@ -10,9 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -26,8 +24,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class ViewDrugWiseActivity extends AppCompatActivity {
 
@@ -43,25 +39,25 @@ public class ViewDrugWiseActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btn_excel =(TextView) findViewById(R.id.btn_excel);
-        btn_excel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-// check if available and not read only
-                boolean isPermission = checkPermission();
-                if (isPermission == true) {
-                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
-                    String format = s.format(new Date());
-                    if(saveToExcel(v.getContext(),"requestindent"+format+".xls")){
-                        Toast.makeText(ViewDrugWiseActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
-                    } else{
-                        Toast.makeText(ViewDrugWiseActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    requestPermission();
-                }
-            }
-        });
+//        btn_excel =(TextView) findViewById(R.id.btn_excel);
+//        btn_excel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//// check if available and not read only
+//                boolean isPermission = checkPermission();
+//                if (isPermission == true) {
+//                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
+//                    String format = s.format(new Date());
+//                    if(saveToExcel(v.getContext(),"requestindent"+format+".xls")){
+//                        Toast.makeText(ViewDrugWiseActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
+//                    } else{
+//                        Toast.makeText(ViewDrugWiseActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    requestPermission();
+//                }
+//            }
+//        });
     }
     private boolean requestPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(ViewDrugWiseActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -77,17 +73,17 @@ public class ViewDrugWiseActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case 1:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
-                    String format = s.format(new Date());
-                    if(saveToExcel(ViewDrugWiseActivity.this,"labtest"+format+".xls")){
-                        Toast.makeText(ViewDrugWiseActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
-                    } else{
-                        Toast.makeText(ViewDrugWiseActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
-                    }
-                }else {
-                    Toast.makeText(ViewDrugWiseActivity.this,"You don't have file permission.",Toast.LENGTH_SHORT).show();
-                }
+//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
+//                    String format = s.format(new Date());
+//                    if(saveToExcel(ViewDrugWiseActivity.this,"labtest"+format+".xls")){
+//                        Toast.makeText(ViewDrugWiseActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
+//                    } else{
+//                        Toast.makeText(ViewDrugWiseActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
+//                    }
+//                }else {
+//                    Toast.makeText(ViewDrugWiseActivity.this,"You don't have file permission.",Toast.LENGTH_SHORT).show();
+//                }
         }
     }
     private boolean checkPermission() {

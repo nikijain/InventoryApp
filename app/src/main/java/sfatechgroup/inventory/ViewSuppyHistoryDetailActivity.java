@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,25 +43,25 @@ public class ViewSuppyHistoryDetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btn_excel =(TextView) findViewById(R.id.btn_excel);
-        btn_excel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-// check if available and not read only
-                boolean isPermission = checkPermission();
-                if (isPermission == true) {
-                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
-                    String format = s.format(new Date());
-                    if(saveToExcel(v.getContext(),"inventory_"+format+".xls")){
-                        Toast.makeText(ViewSuppyHistoryDetailActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
-                    } else{
-                        Toast.makeText(ViewSuppyHistoryDetailActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    requestPermission();
-                }
-            }
-        });
+//        btn_excel =(TextView) findViewById(R.id.btn_excel);
+//        btn_excel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//// check if available and not read only
+//                boolean isPermission = checkPermission();
+//                if (isPermission == true) {
+//                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
+//                    String format = s.format(new Date());
+//                    if(saveToExcel(v.getContext(),"inventory_"+format+".xls")){
+//                        Toast.makeText(ViewSuppyHistoryDetailActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
+//                    } else{
+//                        Toast.makeText(ViewSuppyHistoryDetailActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    requestPermission();
+//                }
+//            }
+//        });
     }
     private boolean requestPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(ViewSuppyHistoryDetailActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -78,16 +77,16 @@ public class ViewSuppyHistoryDetailActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case 1:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
-                    String format = s.format(new Date());
-                    if(saveToExcel(ViewSuppyHistoryDetailActivity.this,"inventory_"+format+".xls")){
-                        Toast.makeText(ViewSuppyHistoryDetailActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
-                    } else{
-                        Toast.makeText(ViewSuppyHistoryDetailActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
-                    }
-                }else {
-                    Toast.makeText(ViewSuppyHistoryDetailActivity.this,"You don't have file permission.",Toast.LENGTH_SHORT).show();
+//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                    SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
+//                    String format = s.format(new Date());
+//                    if(saveToExcel(ViewSuppyHistoryDetailActivity.this,"inventory_"+format+".xls")){
+//                        Toast.makeText(ViewSuppyHistoryDetailActivity.this,"Exported to Excel Successfully.",Toast.LENGTH_SHORT).show();
+//                    } else{
+//                        Toast.makeText(ViewSuppyHistoryDetailActivity.this, "Error in exporting file.", Toast.LENGTH_SHORT).show();
+//                    }
+//                }else {
+//                    Toast.makeText(ViewSuppyHistoryDetailActivity.this,"You don't have file permission.",Toast.LENGTH_SHORT).show();
                 }
         }
     }
