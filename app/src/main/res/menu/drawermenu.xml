@@ -41,11 +41,11 @@
 
         <item
             android:id="@+id/nav_drugwise_request"
-            android:title="Drug Wise Request" />
+            android:title="Drug Wise Indent Request" />
 
         <item
             android:id="@+id/nav_institutewise_request"
-            android:title="Institute Wise Request" />
+            android:title="Institute Wise Indent Request" />
 
 
         <item

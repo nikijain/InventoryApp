@@ -80,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(context, ReceivedIndentsActivity.class);
                     intent.putExtra("param","InstituteWise");
                     startActivity(intent);
+                }else if (menuItem.getItemId() == R.id.nav_item_update_profile) {
+                    intent = new Intent(context, UpdateProfileActivity.class);
+                    startActivity(intent);
                 }
                /* else if (menuItem.getItemId() == R.id.nav_sendto_division) {
                     intent = new Intent(context, SendIndentToDivisionActivity.class);

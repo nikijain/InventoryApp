@@ -12,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -26,8 +25,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class ViewSuppyHistoryDetailActivity extends AppCompatActivity {
 
@@ -87,7 +84,7 @@ public class ViewSuppyHistoryDetailActivity extends AppCompatActivity {
 //                    }
 //                }else {
 //                    Toast.makeText(ViewSuppyHistoryDetailActivity.this,"You don't have file permission.",Toast.LENGTH_SHORT).show();
-                }
+     //           }
         }
     }
     private boolean checkPermission() {
