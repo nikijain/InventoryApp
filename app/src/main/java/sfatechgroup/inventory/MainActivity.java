@@ -89,11 +89,12 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("param","SendToDivision");
                     startActivity(intent);
                 } */
-                else if (menuItem.getItemId() == R.id.nav_indent_history) {
+               /* else if (menuItem.getItemId() == R.id.nav_indent_history) {
                     intent = new Intent(context, SendIndentToDivisionActivity.class);
                     intent.putExtra("param","IndentHistory");
                     startActivity(intent);
-                } else if (menuItem.getItemId() == R.id.nav_item_lab_test) {
+                }*/
+               else if (menuItem.getItemId() == R.id.nav_item_lab_test) {
                     intent = new Intent(context, LabTestActivity.class);
                     startActivity(intent);
                 }else if (menuItem.getItemId() == R.id.nav_item_purchase_orders) {
@@ -110,6 +111,14 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else if (menuItem.getItemId() == R.id.nav_item_notification) {
                     showCustomView();
+                }
+                else if (menuItem.getItemId() == R.id.nav_indent_history) {
+                    intent = new Intent(context, SentIndentHistory.class);
+                    startActivity(intent);
+                }
+                else if (menuItem.getItemId() == R.id.nav_item_update_profile) {
+                    intent = new Intent(context, UpdateProfileActivity.class);
+                    startActivity(intent);
                 }
                 return false;
             }
