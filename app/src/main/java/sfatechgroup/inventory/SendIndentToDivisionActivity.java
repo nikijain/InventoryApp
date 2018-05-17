@@ -44,7 +44,6 @@ public class SendIndentToDivisionActivity extends AppCompatActivity {
 
     private void initializeData1() {
         detailsModels = new ArrayList<>();
-
         detailsModels.add(new DetailsModel("Request Number: 20171220/5706/140729 | Request Date: 20-12-2017","Albendazole IP 25mg/ml", "Liquid", "1000ml / Bottle", "20 Bottle", "Division"));
         detailsModels.add(new DetailsModel("Request Number: 20171213/5706/145416 | Request Date: 13-12-2017","Acriflavin Powder BP 5 gm", "Powder", "25 gm / Pouch", "5 Pouch", "Division"));
         detailsModels.add(new DetailsModel("Request Number: 20171211/5706/152558 | Request Date: 11-12-2017","Albendazole IP 25mg/ml", "Liquid", "1000ml / Bottle", "20 Bottle", "Division"));
