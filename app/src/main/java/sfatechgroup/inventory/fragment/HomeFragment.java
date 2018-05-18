@@ -21,14 +21,14 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(sfatechgroup.inventory.R.layout.fragment_home, container, false);
 
-        linearRateContract = view.findViewById(sfatechgroup.inventory.R.id.linearRateContract);
-        linearRateContract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(getActivity(), sfatechgroup.inventory.RateContractActivity.class);
-                startActivity(intent);
-            }
-        });
+//        linearRateContract = view.findViewById(sfatechgroup.inventory.R.id.linearRateContract);
+//        linearRateContract.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                intent = new Intent(getActivity(), sfatechgroup.inventory.RateContractActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         return view;
     }

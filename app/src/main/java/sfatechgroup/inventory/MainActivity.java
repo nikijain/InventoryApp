@@ -18,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     NotificationAdapter adapter;
     List<DetailsModel> detailsModels = new ArrayList<>();
-
+    Menu nav_Menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +53,50 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mNavigationView = (NavigationView) findViewById(R.id.shitstuff);
         mNavigationView.setItemIconTintList(null);
+        nav_Menu = mNavigationView.getMenu();
 
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
-        mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.fragment.HomeFragment()).commit();
+        if(LoginActivity.selectedLoginType.equalsIgnoreCase("Dealer")) {
+            mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.dealer.HomeFragment_Dealer()).commit();
 
+            nav_Menu.findItem(R.id.nav_item_home).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_dealer_orders).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_change_pass).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_update_profile).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_logout).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_rate_contract).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_notification).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_local_purchase).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_avail_stock).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_supply_history).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_purchase_orders).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_lab_test).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_vendor_list).setVisible(false);
+            nav_Menu.findItem(R.id.nav_drugwise_request).setVisible(false);
+            nav_Menu.findItem(R.id.nav_institutewise_request).setVisible(false);
+            nav_Menu.findItem(R.id.nav_indent_history).setVisible(false);
+        }
+        else {
+            mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.fragment.HomeFragment()).commit();
+
+            nav_Menu.findItem(R.id.nav_item_home).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_dealer_orders).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_change_pass).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_update_profile).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_logout).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_rate_contract).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_notification).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_local_purchase).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_avail_stock).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_supply_history).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_purchase_orders).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_lab_test).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_vendor_list).setVisible(true);
+            nav_Menu.findItem(R.id.nav_drugwise_request).setVisible(true);
+            nav_Menu.findItem(R.id.nav_institutewise_request).setVisible(true);
+            nav_Menu.findItem(R.id.nav_indent_history).setVisible(true);
+        }
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {

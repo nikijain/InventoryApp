@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     Context context;
     TextView txtLogin;
     Intent intent;
+    public static String selectedLoginType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 SpinnerModel spinnerModel = (SpinnerModel) parent.getItemAtPosition(position);
                 selected_id = spinnerModel.id;
+                selectedLoginType = spinnerModel.name;
             }
 
             @Override
@@ -102,9 +105,13 @@ public class LoginActivity extends AppCompatActivity {
         txtLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+                if(!selectedLoginType.equalsIgnoreCase("Select Login Type")) {
+                    intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Toast.makeText(context,"Please Select Login Type",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
