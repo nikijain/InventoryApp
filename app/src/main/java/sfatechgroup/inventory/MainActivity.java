@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sfatechgroup.inventory.adapter.NotificationAdapter;
+import sfatechgroup.inventory.lab.Lab_RequestSenderWiseActivity;
+import sfatechgroup.inventory.lab.PendingListActivity;
+import sfatechgroup.inventory.lab.TestedListActivity;
 import sfatechgroup.inventory.model.DetailsModel;
 
 public class MainActivity extends AppCompatActivity {
@@ -76,12 +79,37 @@ public class MainActivity extends AppCompatActivity {
             nav_Menu.findItem(R.id.nav_drugwise_request).setVisible(false);
             nav_Menu.findItem(R.id.nav_institutewise_request).setVisible(false);
             nav_Menu.findItem(R.id.nav_indent_history).setVisible(false);
+        } else if(LoginActivity.selectedLoginType.equalsIgnoreCase("lab")) {
+            mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.lab.HomeFragment_Lab()).commit();
+
+            nav_Menu.findItem(R.id.nav_item_home).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_pending_list).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_labrequest).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_tested_list).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_dealer_orders).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_change_pass).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_update_profile).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_logout).setVisible(true);
+            nav_Menu.findItem(R.id.nav_item_rate_contract).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_notification).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_local_purchase).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_avail_stock).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_supply_history).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_purchase_orders).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_lab_test).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_vendor_list).setVisible(false);
+            nav_Menu.findItem(R.id.nav_drugwise_request).setVisible(false);
+            nav_Menu.findItem(R.id.nav_institutewise_request).setVisible(false);
+            nav_Menu.findItem(R.id.nav_indent_history).setVisible(false);
         }
         else {
             mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.fragment.HomeFragment()).commit();
 
             nav_Menu.findItem(R.id.nav_item_home).setVisible(true);
             nav_Menu.findItem(R.id.nav_item_dealer_orders).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_labrequest).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_pending_list).setVisible(false);
+            nav_Menu.findItem(R.id.nav_item_tested_list).setVisible(false);
             nav_Menu.findItem(R.id.nav_item_change_pass).setVisible(true);
             nav_Menu.findItem(R.id.nav_item_update_profile).setVisible(true);
             nav_Menu.findItem(R.id.nav_item_logout).setVisible(true);
@@ -108,6 +136,15 @@ public class MainActivity extends AppCompatActivity {
                     mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.fragment.HomeFragment()).commit();
                 } else if (menuItem.getItemId() == R.id.nav_item_rate_contract) {
                     intent = new Intent(context, RateContractActivity.class);
+                    startActivity(intent);
+                }else if (menuItem.getItemId() == R.id.nav_item_labrequest) {
+                    intent = new Intent(context, Lab_RequestSenderWiseActivity.class);
+                    startActivity(intent);
+                }else if (menuItem.getItemId() == R.id.nav_item_pending_list) {
+                    intent = new Intent(context, PendingListActivity.class);
+                    startActivity(intent);
+                }else if (menuItem.getItemId() == R.id.nav_item_tested_list) {
+                    intent = new Intent(context, TestedListActivity.class);
                     startActivity(intent);
                 } else if (menuItem.getItemId() == R.id.nav_item_local_purchase) {
                     intent = new Intent(context, LocalPurchaseActivity.class);
@@ -181,12 +218,9 @@ public class MainActivity extends AppCompatActivity {
                 showCustomView();
             }
         });
-
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-
         mDrawerToggle.syncState();
     }
-
 
     public void showCustomView() {
         // custom dialog

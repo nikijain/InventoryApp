@@ -6,9 +6,8 @@
                 <shape>
                     <gradient
                         android:angle="270"
-                        android:startColor="@color/colorTheme"
-                        android:endColor="#c5007aff"/>
-                    <!--<solid android:color="#0866C0" />-->
+                        android:startColor="@color/colorOrange"
+                        android:endColor="@color/colorOrange"/>
                     <corners android:radius="5dip"/>
                 </shape>
             </item>
@@ -16,22 +15,13 @@
     </item>
     <item>
         <layer-list>
-            <!-- SHADOW LAYER -->
-         <!--  <item android:left="2dp" android:top="2dp" >
-                <shape>
-                    <solid android:color="@color/medium_grey" />
-                    <corners android:radius="1dip"/>
-                </shape>
-            </item>-->
-            <!-- CONTENT LAYER -->
             <item android:bottom="2dp" android:right="2dp"
                 android:left="2dp" android:top="2dp">
                 <shape>
                     <gradient
                         android:angle="270"
-                        android:startColor="@color/colorTheme"
-                        android:endColor="#c5007aff"/>
-                    <!--<solid android:color="@color/noticeBG" />-->
+                        android:startColor="@color/colorOrange"
+                        android:endColor="@color/colorOrange"/>
                     <corners android:radius="5dip"/>
                 </shape>
             </item>

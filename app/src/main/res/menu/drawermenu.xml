@@ -41,7 +41,6 @@
             android:id="@+id/nav_item_vendor_list"
             android:title="Vendor List" />
 
-
         <item
             android:id="@+id/nav_drugwise_request"
             android:title="Drug Wise Indent Request" />
@@ -50,11 +49,20 @@
             android:id="@+id/nav_institutewise_request"
             android:title="Institute Wise Indent Request" />
 
-
         <item
             android:id="@+id/nav_indent_history"
             android:title="Sent Indent History" />
 
+        <item
+            android:id="@+id/nav_item_labrequest"
+            android:title="Request Sender Wise" />
+        <item
+            android:id="@+id/nav_item_tested_list"
+            android:title="Tested List" />
+
+        <item
+            android:id="@+id/nav_item_pending_list"
+            android:title="Pending List" />
 
         <item
             android:id="@+id/nav_item_change_pass"

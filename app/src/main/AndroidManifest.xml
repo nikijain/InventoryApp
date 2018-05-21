@@ -21,13 +21,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
+        <activity android:name=".dealer.AllOrdersActivity" />
+        <activity android:name=".lab.TestedListActivity" />
+        <activity android:name=".lab.PendingListActivity" />
+        <activity android:name=".lab.Lab_RequestSenderWiseActivity" />
+        <activity android:name=".lab.Lab_ViewAllRequestsActivity" />
         <activity android:name=".RateContractActivity" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".VendorListActivity" />
         <activity android:name=".ReceivedIndentsActivity" />
         <activity android:name=".SendIndentToDivisionActivity" />
-        <activity
-            android:name=".LocalPurchaseActivity"
+        <activity android:name=".LocalPurchaseActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".UpdateProfileActivity" />
