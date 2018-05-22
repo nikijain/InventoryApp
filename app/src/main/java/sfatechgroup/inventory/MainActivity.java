@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             mFragmentTransaction.replace(R.id.containerView, new sfatechgroup.inventory.fragment.HomeFragment()).commit();
-
             nav_Menu.findItem(R.id.nav_item_home).setVisible(true);
             nav_Menu.findItem(R.id.nav_item_dealer_orders).setVisible(false);
             nav_Menu.findItem(R.id.nav_item_labrequest).setVisible(false);
